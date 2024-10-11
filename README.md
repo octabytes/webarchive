@@ -21,3 +21,12 @@ To save all files in current directory use `.`
 ## Install Httrack on MacOS
 
 `brew install httrack`
+
+## Remove href from links
+
+1. Open your HTML file in VSCode.
+2. Press Ctrl + H to bring up the Find and Replace panel.
+3. Enable the Regular Expression option by clicking the .\* button (or pressing Alt + R).
+4. Use the following regular expression in the Find field:`(<a[^>]*?)\s+href="[^"]*"`
+5. In the Replace field, enter: `$1`
+6. Click Replace All.
