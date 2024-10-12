@@ -13,6 +13,12 @@
       Chatwoot: Customer engagement platform. An open-source, self-hosted
       alternative to Intercom, Zendesk
     </title>
+    <script>
+      window.onload = function () {
+        const height = document.body.scrollHeight;
+        window.parent.postMessage(height, "*");
+      };
+    </script>
     <meta
       name="description"
       content="Chatwoot is an open-source as well as cloud-based customer engagement platform. Manage all of your customer conversation channels from one place."
