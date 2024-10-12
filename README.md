@@ -31,6 +31,11 @@ To save all files in current directory use `.`
 5. In the Replace field, enter: `$1`
 6. Click Replace All.
 
+## Remove src set from images
+
+1. `srcset="[^"]*"`
+2. `sizes="[^"]*"`
+
 ## Send iframe height
 
 Add this script right after title in head
