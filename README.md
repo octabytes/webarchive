@@ -30,3 +30,16 @@ To save all files in current directory use `.`
 4. Use the following regular expression in the Find field:`(<a[^>]*?)\s+href="[^"]*"`
 5. In the Replace field, enter: `$1`
 6. Click Replace All.
+
+## Send iframe height
+
+Add this script right after title in head
+
+```js
+<script>
+    window.onload = function () {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage(height, "*");
+    };
+</script>
+```
