@@ -6,6 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Ghost: The best open source blog &amp; newsletter platform</title>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://e.ghost.org/ph/ingest/static/array.js"
+    ></script>
     <script>
       window.onload = function () {
         const height = document.body.scrollHeight;
@@ -689,6 +694,48 @@
         top: 0;
       }
     </style>
+    <style type="text/css">
+      /* Chart.js */
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        animation: chartjs-render-animation 1ms;
+      }
+      .chartjs-size-monitor,
+      .chartjs-size-monitor-expand,
+      .chartjs-size-monitor-shrink {
+        position: absolute;
+        direction: ltr;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: -1;
+      }
+      .chartjs-size-monitor-expand > div {
+        position: absolute;
+        width: 1000000px;
+        height: 1000000px;
+        left: 0;
+        top: 0;
+      }
+      .chartjs-size-monitor-shrink > div {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        left: 0;
+        top: 0;
+      }
+    </style>
   </head>
   <body
     class="antialiased text-md"
@@ -916,8 +963,8 @@
           >
             <video
               class="video w-full"
-              src="https://ghost.org/videos/dashboard.mp4"
-              poster="https://ghost.org/images/home/dashboard.webp"
+              src="videos/dashboard.mp4"
+              poster="images/home/dashboard.webp"
               preload="none"
               muted=""
               loop=""
@@ -998,7 +1045,7 @@
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/10.png"
+                src="images/marketplace/themes/gallery/10.webp"
                 alt=""
                 width="1134"
                 height="601"
@@ -1021,14 +1068,14 @@
             </div>
             <div class="col-span-1 grid grid-cols-1 gap-3 lg:gap-4">
               <img
-                src="images/marketplace/themes/gallery/31.png"
+                src="images/marketplace/themes/gallery/31.webp"
                 alt=""
                 width="700"
                 height="389"
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/16.png"
+                src="images/marketplace/themes/gallery/16.webp"
                 alt=""
                 width="1116"
                 height="687"
@@ -1042,7 +1089,7 @@
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/29.png"
+                src="images/marketplace/themes/gallery/29.webp"
                 alt=""
                 width="700"
                 height="595"
@@ -1058,7 +1105,7 @@
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/33.png"
+                src="images/marketplace/themes/gallery/33.webp"
                 alt=""
                 width="700"
                 height="604"
@@ -1081,7 +1128,7 @@
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/4.png"
+                src="images/marketplace/themes/gallery/4.webp"
                 alt=""
                 width="1000"
                 height="1028"
@@ -1104,14 +1151,14 @@
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/25.png"
+                src="images/marketplace/themes/gallery/25.webp"
                 alt=""
                 width="1044"
                 height="649"
                 loading="lazy"
               />
               <img
-                src="images/marketplace/themes/gallery/14.png"
+                src="images/marketplace/themes/gallery/14.webp"
                 alt=""
                 width="1218"
                 height="925"
@@ -1305,8 +1352,8 @@
             ><video
               id="members-video"
               class="video xl:-mx-[50px] max-w-none"
-              src="https://ghost.org/videos/members.mp4"
-              poster="https://ghost.org/images/home/members.webp"
+              src="videos/members.mp4"
+              poster="images/home/members.webp"
               preload="none"
               muted=""
               loop=""
@@ -1338,15 +1385,7 @@
                 </p>
               </div>
               <div class="col-span-6">
-                <div class="w-full">
-                  <img
-                    src="images/home/offers-promotions_hu1cd598fd929b88f246081ecc08ea6447_213966_1350x0_resize_q100_h2_box_3.webp"
-                    alt="Offers &amp; promotions"
-                    width="1350"
-                    height="686"
-                    loading="lazy"
-                  />
-                </div>
+                <div class="w-full"></div>
                 <h3 class="mt-10 text-2xl lg:text-3xl text-black leading-none">
                   Offers &amp; promotions.
                 </h3>
@@ -2049,14 +2088,22 @@
                     <div class=""></div>
                   </div>
                 </div>
+                <div class="chartjs-size-monitor">
+                  <div class="chartjs-size-monitor-expand">
+                    <div class=""></div>
+                  </div>
+                  <div class="chartjs-size-monitor-shrink">
+                    <div class=""></div>
+                  </div>
+                </div>
                 <canvas
                   class="-mb-[12px] chartjs-render-monitor"
                   id="publisherChart"
                   x-data="publisherChart()"
                   x-init="$nextTick(() => {start()})"
-                  width="1212"
-                  height="606"
-                  style="display: block; width: 1212px; height: 606px"
+                  width="736"
+                  height="368"
+                  style="display: block; width: 368px; height: 184px"
                 ></canvas>
               </div>
             </section>
@@ -2112,7 +2159,7 @@
           <div class="col-span-12 w-full max-w-8xl mx-auto mt-10">
             <img
               class="rounded-md md:rounded-xl lg:rounded-2xl"
-              src="images/home/posts.png"
+              src="images/home/posts.webp"
               alt="Ghost screenshot"
               width="3600"
               height="1992"
