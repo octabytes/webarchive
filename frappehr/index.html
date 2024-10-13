@@ -14,12 +14,169 @@
       async=""
       src="https://posthog.frappe.cloud/static/array.js"
     ></script>
+    <script
+      type="text/javascript"
+      async=""
+      src="https://posthog.frappe.cloud/static/array.js"
+    ></script>
     <script>
       window.onload = function () {
         const height = document.body.scrollHeight;
         window.parent.postMessage(height, "*");
       };
     </script>
+    <style data-tippy-stylesheet="">
+      .tippy-box[data-animation="fade"][data-state="hidden"] {
+        opacity: 0;
+      }
+      [data-tippy-root] {
+        max-width: calc(100vw - 10px);
+      }
+      .tippy-box {
+        position: relative;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 1.4;
+        white-space: normal;
+        outline: 0;
+        transition-property: transform, visibility, opacity;
+      }
+      .tippy-box[data-placement^="top"] > .tippy-arrow {
+        bottom: 0;
+      }
+      .tippy-box[data-placement^="top"] > .tippy-arrow:before {
+        bottom: -7px;
+        left: 0;
+        border-width: 8px 8px 0;
+        border-top-color: initial;
+        transform-origin: center top;
+      }
+      .tippy-box[data-placement^="bottom"] > .tippy-arrow {
+        top: 0;
+      }
+      .tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+        top: -7px;
+        left: 0;
+        border-width: 0 8px 8px;
+        border-bottom-color: initial;
+        transform-origin: center bottom;
+      }
+      .tippy-box[data-placement^="left"] > .tippy-arrow {
+        right: 0;
+      }
+      .tippy-box[data-placement^="left"] > .tippy-arrow:before {
+        border-width: 8px 0 8px 8px;
+        border-left-color: initial;
+        right: -7px;
+        transform-origin: center left;
+      }
+      .tippy-box[data-placement^="right"] > .tippy-arrow {
+        left: 0;
+      }
+      .tippy-box[data-placement^="right"] > .tippy-arrow:before {
+        left: -7px;
+        border-width: 8px 8px 8px 0;
+        border-right-color: initial;
+        transform-origin: center right;
+      }
+      .tippy-box[data-inertia][data-state="visible"] {
+        transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+      }
+      .tippy-arrow {
+        width: 16px;
+        height: 16px;
+        color: #333;
+      }
+      .tippy-arrow:before {
+        content: "";
+        position: absolute;
+        border-color: transparent;
+        border-style: solid;
+      }
+      .tippy-content {
+        position: relative;
+        padding: 5px 9px;
+        z-index: 1;
+      }
+    </style>
+    <style data-tippy-stylesheet="">
+      .tippy-box[data-animation="fade"][data-state="hidden"] {
+        opacity: 0;
+      }
+      [data-tippy-root] {
+        max-width: calc(100vw - 10px);
+      }
+      .tippy-box {
+        position: relative;
+        background-color: #333;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 1.4;
+        white-space: normal;
+        outline: 0;
+        transition-property: transform, visibility, opacity;
+      }
+      .tippy-box[data-placement^="top"] > .tippy-arrow {
+        bottom: 0;
+      }
+      .tippy-box[data-placement^="top"] > .tippy-arrow:before {
+        bottom: -7px;
+        left: 0;
+        border-width: 8px 8px 0;
+        border-top-color: initial;
+        transform-origin: center top;
+      }
+      .tippy-box[data-placement^="bottom"] > .tippy-arrow {
+        top: 0;
+      }
+      .tippy-box[data-placement^="bottom"] > .tippy-arrow:before {
+        top: -7px;
+        left: 0;
+        border-width: 0 8px 8px;
+        border-bottom-color: initial;
+        transform-origin: center bottom;
+      }
+      .tippy-box[data-placement^="left"] > .tippy-arrow {
+        right: 0;
+      }
+      .tippy-box[data-placement^="left"] > .tippy-arrow:before {
+        border-width: 8px 0 8px 8px;
+        border-left-color: initial;
+        right: -7px;
+        transform-origin: center left;
+      }
+      .tippy-box[data-placement^="right"] > .tippy-arrow {
+        left: 0;
+      }
+      .tippy-box[data-placement^="right"] > .tippy-arrow:before {
+        left: -7px;
+        border-width: 8px 8px 8px 0;
+        border-right-color: initial;
+        transform-origin: center right;
+      }
+      .tippy-box[data-inertia][data-state="visible"] {
+        transition-timing-function: cubic-bezier(0.54, 1.5, 0.38, 1.11);
+      }
+      .tippy-arrow {
+        width: 16px;
+        height: 16px;
+        color: #333;
+      }
+      .tippy-arrow:before {
+        content: "";
+        position: absolute;
+        border-color: transparent;
+        border-style: solid;
+      }
+      .tippy-content {
+        position: relative;
+        padding: 5px 9px;
+        z-index: 1;
+      }
+    </style>
     <style data-tippy-stylesheet="">
       .tippy-box[data-animation="fade"][data-state="hidden"] {
         opacity: 0;
@@ -6513,6 +6670,16 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
     <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script
+      defer=""
+      data-api="https://frappecloud.com/api/event"
+      data-domain="frappe.io"
+      src="https://frappecloud.com/js/script.js"
+    ></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.plyr.io/3.6.4/plyr.polyfilled.js"></script>
   </head>
 
   <body class="fb-8d50cae0">
@@ -7780,330 +7947,7 @@
               </div>
             </div>
           </div>
-          <div class="fb-5b7c2b86">
-            <div
-              tabindex="0"
-              class="plyr plyr--full-ui plyr--video plyr--html5 plyr--fullscreen-enabled plyr--paused plyr--stopped plyr--pip-supported plyr__poster-enabled plyr--is-touch"
-            >
-              <div class="plyr__controls">
-                <button
-                  class="plyr__controls__item plyr__control"
-                  type="button"
-                  data-plyr="play"
-                  aria-label="Play"
-                >
-                  <svg
-                    class="icon--pressed"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use xlink:href="#plyr-pause"></use></svg
-                  ><svg
-                    class="icon--not-pressed"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use xlink:href="#plyr-play"></use></svg
-                  ><span class="label--pressed plyr__sr-only">Pause</span
-                  ><span class="label--not-pressed plyr__sr-only">Play</span>
-                </button>
-                <div class="plyr__controls__item plyr__progress__container">
-                  <div class="plyr__progress">
-                    <input
-                      data-plyr="seek"
-                      type="range"
-                      min="0"
-                      max="100"
-                      step="0.01"
-                      value="0"
-                      autocomplete="off"
-                      role="slider"
-                      aria-label="Seek"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                      aria-valuenow="0"
-                      id="plyr-seek-5919"
-                      aria-valuetext="00:00 of 04:32"
-                      style="--value: 0%"
-                    /><progress
-                      class="plyr__progress__buffer"
-                      min="0"
-                      max="100"
-                      value="0"
-                      role="progressbar"
-                      aria-hidden="true"
-                    >
-                      % buffered</progress
-                    ><span class="plyr__tooltip">00:00</span>
-                  </div>
-                </div>
-                <div class="plyr__controls__item plyr__volume">
-                  <button
-                    type="button"
-                    class="plyr__control plyr__control--pressed"
-                    data-plyr="mute"
-                  >
-                    <svg
-                      class="icon--pressed"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <use xlink:href="#plyr-muted"></use></svg
-                    ><svg
-                      class="icon--not-pressed"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <use xlink:href="#plyr-volume"></use></svg
-                    ><span class="label--pressed plyr__sr-only">Unmute</span
-                    ><span class="label--not-pressed plyr__sr-only"
-                      >Mute</span
-                    ></button
-                  ><input
-                    data-plyr="volume"
-                    type="range"
-                    min="0"
-                    max="1"
-                    step="0.05"
-                    value="1"
-                    autocomplete="off"
-                    role="slider"
-                    aria-label="Volume"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                    id="plyr-volume-5919"
-                    aria-valuetext="0.0%"
-                    style="--value: 0%"
-                  />
-                </div>
-                <div class="plyr__controls__item plyr__menu">
-                  <button
-                    aria-haspopup="true"
-                    aria-controls="plyr-settings-5919"
-                    aria-expanded="false"
-                    type="button"
-                    class="plyr__control"
-                    data-plyr="settings"
-                  >
-                    <svg aria-hidden="true" focusable="false">
-                      <use xlink:href="#plyr-settings"></use></svg
-                    ><span class="plyr__sr-only">Settings</span>
-                  </button>
-                  <div
-                    class="plyr__menu__container"
-                    id="plyr-settings-5919"
-                    hidden=""
-                  >
-                    <div>
-                      <div id="plyr-settings-5919-home">
-                        <div role="menu">
-                          <button
-                            data-plyr="settings"
-                            type="button"
-                            class="plyr__control plyr__control--forward"
-                            role="menuitem"
-                            aria-haspopup="true"
-                            hidden=""
-                          >
-                            <span
-                              >Captions<span class="plyr__menu__value"
-                                >Disabled</span
-                              ></span
-                            ></button
-                          ><button
-                            data-plyr="settings"
-                            type="button"
-                            class="plyr__control plyr__control--forward"
-                            role="menuitem"
-                            aria-haspopup="true"
-                            hidden=""
-                          >
-                            <span
-                              >Quality<span class="plyr__menu__value"
-                                >undefined</span
-                              ></span
-                            ></button
-                          ><button
-                            data-plyr="settings"
-                            type="button"
-                            class="plyr__control plyr__control--forward"
-                            role="menuitem"
-                            aria-haspopup="true"
-                          >
-                            <span
-                              >Speed<span class="plyr__menu__value"
-                                >Normal</span
-                              ></span
-                            >
-                          </button>
-                        </div>
-                      </div>
-                      <div id="plyr-settings-5919-captions" hidden="">
-                        <button
-                          type="button"
-                          class="plyr__control plyr__control--back"
-                        >
-                          <span aria-hidden="true">Captions</span
-                          ><span class="plyr__sr-only"
-                            >Go back to previous menu</span
-                          >
-                        </button>
-                        <div role="menu"></div>
-                      </div>
-                      <div id="plyr-settings-5919-quality" hidden="">
-                        <button
-                          type="button"
-                          class="plyr__control plyr__control--back"
-                        >
-                          <span aria-hidden="true">Quality</span
-                          ><span class="plyr__sr-only"
-                            >Go back to previous menu</span
-                          >
-                        </button>
-                        <div role="menu"></div>
-                      </div>
-                      <div id="plyr-settings-5919-speed" hidden="">
-                        <button
-                          type="button"
-                          class="plyr__control plyr__control--back"
-                        >
-                          <span aria-hidden="true">Speed</span
-                          ><span class="plyr__sr-only"
-                            >Go back to previous menu</span
-                          >
-                        </button>
-                        <div role="menu">
-                          <button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="0.5"
-                          >
-                            <span>0.5×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="0.75"
-                          >
-                            <span>0.75×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="true"
-                            value="1"
-                          >
-                            <span>Normal</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="1.25"
-                          >
-                            <span>1.25×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="1.5"
-                          >
-                            <span>1.5×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="1.75"
-                          >
-                            <span>1.75×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="2"
-                          >
-                            <span>2×</span></button
-                          ><button
-                            data-plyr="speed"
-                            type="button"
-                            role="menuitemradio"
-                            class="plyr__control"
-                            aria-checked="false"
-                            value="4"
-                          >
-                            <span>4×</span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  class="plyr__controls__item plyr__control"
-                  type="button"
-                  data-plyr="fullscreen"
-                >
-                  <svg
-                    class="icon--pressed"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use xlink:href="#plyr-exit-fullscreen"></use></svg
-                  ><svg
-                    class="icon--not-pressed"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <use xlink:href="#plyr-enter-fullscreen"></use></svg
-                  ><span class="label--pressed plyr__sr-only"
-                    >Exit fullscreen</span
-                  ><span class="label--not-pressed plyr__sr-only"
-                    >Enter fullscreen</span
-                  >
-                </button>
-              </div>
-              <div class="plyr__video-wrapper">
-                <video
-                  class="fb-f45724e0"
-                  muted=""
-                  poster="https://frappe.io/files/frappehr-intro-poster.png"
-                  src="https://frappe.io/files/frappe-hr-hero-video-final.mp4"
-                  data-poster="https://frappe.io/files/frappehr-intro-poster.png"
-                ></video>
-                <div
-                  class="plyr__poster"
-                  style="
-                    background-image: url('https://frappe.io/files/frappehr-intro-poster.png');
-                  "
-                ></div>
-              </div>
-              <div class="plyr__captions"></div>
-              <button
-                type="button"
-                class="plyr__control plyr__control--overlaid"
-                data-plyr="play"
-                aria-label="Play"
-              >
-                <svg aria-hidden="true" focusable="false">
-                  <use xlink:href="#plyr-play"></use></svg
-                ><span class="plyr__sr-only">Play</span>
-              </button>
-            </div>
-          </div>
+
           <div class="fb-1de429c0">
             <div class="fb-bfaadacd">
               <div class="fb-497206ce __text_block__">
@@ -10309,8 +10153,7 @@
             <div class="fb-0a86276d __text_block__ f-thought">
               <p>
                 <em
-                  >Do one thing every day that scares you. – Eleanor
-                  Roosevelt</em
+                  >"To err is human, to forgive is design." – Andrew Dillon</em
                 >
               </p>
             </div>
