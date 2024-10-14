@@ -6,11 +6,6 @@
     <meta http-equiv="x-ua-compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Ghost: The best open source blog &amp; newsletter platform</title>
-    <script
-      type="text/javascript"
-      async=""
-      src="https://e.ghost.org/ph/ingest/static/array.js"
-    ></script>
     <script>
       window.onload = function () {
         const height = document.body.scrollHeight;
@@ -736,6 +731,48 @@
         top: 0;
       }
     </style>
+    <style type="text/css">
+      /* Chart.js */
+      @keyframes chartjs-render-animation {
+        from {
+          opacity: 0.99;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .chartjs-render-monitor {
+        animation: chartjs-render-animation 1ms;
+      }
+      .chartjs-size-monitor,
+      .chartjs-size-monitor-expand,
+      .chartjs-size-monitor-shrink {
+        position: absolute;
+        direction: ltr;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        pointer-events: none;
+        visibility: hidden;
+        z-index: -1;
+      }
+      .chartjs-size-monitor-expand > div {
+        position: absolute;
+        width: 1000000px;
+        height: 1000000px;
+        left: 0;
+        top: 0;
+      }
+      .chartjs-size-monitor-shrink > div {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        left: 0;
+        top: 0;
+      }
+    </style>
   </head>
   <body
     class="antialiased text-md"
@@ -948,7 +985,7 @@
           }
         </script>
         <div
-          class="mt-[16vmin] mx-auto max-w-8xl px-4 flex flex-col items-center gap-3 text-center"
+          class="mx-auto max-w-8xl px-4 flex flex-col items-center gap-3 text-center"
         >
           <h1 class="text-[6.5vmin] lg:text-6xl leading-[1] text-gray-900">
             <span class="block">Independent technology</span>
@@ -2101,9 +2138,9 @@
                   id="publisherChart"
                   x-data="publisherChart()"
                   x-init="$nextTick(() => {start()})"
-                  width="736"
-                  height="368"
-                  style="display: block; width: 368px; height: 184px"
+                  width="1212"
+                  height="606"
+                  style="display: block; width: 1212px; height: 606px"
                 ></canvas>
               </div>
             </section>
